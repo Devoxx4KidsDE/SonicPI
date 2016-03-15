@@ -1,2 +1,2 @@
-# SonicPI
-Workshop for Sonic PU
+# workshop-sonic-pi
+Workshop for Sonic PI
