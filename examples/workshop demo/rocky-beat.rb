@@ -1,5 +1,5 @@
 #
-# Rocky Beat by Stefan H?hn
+# Rocky Beat by Stefan Höhn
 # - Strong Beat with Guitar Power Chord -
 
 #
