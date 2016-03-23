@@ -1,5 +1,5 @@
 #
-# Rocky Beat by Stefan Höhn
+# Rocky Beat by Stefan H?hn
 # - Strong Beat with Guitar Power Chord -
 
 #
@@ -19,6 +19,10 @@ live_loop :song do
   note = song.tick
   sleep 8
 end
+reset_mixer!
+
+
+set_mixer_control! amp: 2, amp_slide: 16
 
 with_fx :reverb do
   live_loop :main do
@@ -34,6 +38,19 @@ with_fx :reverb do
     end
   end
 
+end
+
+with_fx :distortion,  distort: 0.9 do
+  live_loop :mel do
+    use_synth :piano
+    #sleep 96
+    play_pattern_timed [:c4, :ds4, :c4, :f4,  :c4, :g4], [1,2, 1,2, 1, 9], amp: 2
+    play_pattern_timed [:c4, :ds4, :c4, :f4,  :c4, :c4, :c4, :ds4, :d4, :as3, :g3], [1,2, 1,2, 1,2, 3, 1, 1, 1, 1], amp: 2
+    play_pattern_timed [:c4, :ds4, :c4, :f4,  :c4, :g4], [1,2, 1,2, 1, 9], amp: 2, pitch: 4
+    play_pattern_timed [:c4, :ds4, :c4, :f4,  :c4, :c4, :c4, :ds4, :d4, :as3, :g3], [1,2, 1,2, 1,2, 3, 1, 1, 1, 1], amp: 2
+    play_pattern_timed [:c4, :ds4, :c4, :f4,  :c4, :g4], [1,2, 1,2, 1, 9], amp: 2
+    play_pattern_timed [:c4, :ds4, :c4, :f4,  :c4, :c4, :c4, :ds4, :d4, :as3, :g3], [1,2, 1,2, 1,2, 3, 1, 1, 1, 1], amp: 2
+  end
 end
 
 live_loop :beat do
@@ -63,19 +80,19 @@ end
 live_loop :guitar do
   sync :beat
   with_fx :reverb, room: 0.5 do
-    sample :d4k__eguit_c, start: 0.08, finish: 0.09, amp: 2
+    sample :d4k__eguit_c, start: 0.08, finish: 0.09, amp: 4
     sleep 0.5
-    sample :d4k__eguit_c, start: 0.08, finish: 0.09, amp: 2
+    sample :d4k__eguit_c, start: 0.08, finish: 0.09, amp: 4
     sleep 1
-    sample :d4k__eguit_c, start: 0.08, finish: 0.09, amp: 2
+    sample :d4k__eguit_c, start: 0.08, finish: 0.09, amp: 4
     sleep 0.5
-    sample :d4k__eguit_c, start: 0.08, finish: 0.09, amp: 2
+    sample :d4k__eguit_c, start: 0.08, finish: 0.09, amp: 4
     sleep 0.5
-    sample :d4k__eguit_c, start: 0.08, finish: 0.09, amp: 2
+    sample :d4k__eguit_c, start: 0.08, finish: 0.09, amp: 4
     sleep 0.5
-    sample :d4k__eguit_c, start: 0.08, finish: 0.09, amp: 2
+    sample :d4k__eguit_c, start: 0.08, finish: 0.09, amp: 4
     sleep 0.5
-    sample :d4k__eguit_c, start: 0.08, finish: 0.09, amp: 2
+    sample :d4k__eguit_c, start: 0.08, finish: 0.09, amp: 4
     sleep 1.5
 
     sleep 11
