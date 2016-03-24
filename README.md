@@ -1,6 +1,10 @@
+![Devoxx4Kids](./logo.jpg)
+
+
+
 # Workshop for Sonic PI
 
-This workshop was put together by Stefan Höhn, Irene Höppner and Matthias Malstädt
+This workshop was put together by *Stefan Höhn, Irene Höppner and Matthias Malstädt*
 
 The workshop was created to be finished within roughly 80-90 minutes.
 
