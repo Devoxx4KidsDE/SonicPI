@@ -1,10 +1,10 @@
 ##
 ## Meant as an example the can be put together in a live demo by switching on and off several live loops
 ## the switching is done with the flags provided in the control-loop.
-## 
+##
 ## The fanfare section has been taken from https://rbnrpi.wordpress.com/project-list/fun-with-sonic-pi-2-samples/
 ##
-use_sample_pack_as '/devoxx4Kids/workshop-sonic-pi/samples', :d4k
+d4k =  '/devoxx4Kids/workshop-sonic-pi/samples'
 
 machineOn = 0
 scaleMelodyOn = 0
@@ -31,10 +31,8 @@ end
 
 live_loop :drums do
   if drumsOn == 1
+    sample :sn_zome
     sleep 1
-    with_fx(:reverb, room: 0.5, mix: 0.9) do
-      sample :sn_zome
-    end
   else
     sleep 1
   end
@@ -44,13 +42,13 @@ live_loop :claps do
   sync :drums
   if clapsOn == 1
     with_fx(:reverb, room: 0.1, mix: 0.4) do
-      # sample :clap1, amp: 5, rate: -2
-      # sleep 0.25
-      sample :d4k__clap1, amp: 5, rate: 1
+      #sample d4k, "clap1", amp: 5, rate: -2
+      #sleep 0.25
+      sample d4k, "clap1", amp: 5, rate: 1
       sleep 1
-      sample :d4k__clap1, amp: 5, rate: 0.5
+      sample d4k, "clap1", amp: 5, rate: 0.5
       sleep 0.5
-      sample :d4k__clap1, amp: 5, rate: 0.5
+      sample d4k, "clap1", amp: 5, rate: 0.5
       sleep 0.5
     end
   else
@@ -113,14 +111,14 @@ live_loop :chords do
         sleep 1
         play_chord chord(:g4, :major), amp: 3
         sleep 2
-
+        
         play_chord chord(:c4, :major), amp: 3
         sleep 1
         play_chord chord(:f3, :major), amp: 3
         sleep 1
         play_chord chord(:c4, :major), amp: 3
         sleep 2
-
+        
         play_chord chord(:c4, :major), amp: 3, release: 0.5
         sleep 0.5
         play_chord chord(:c4, :major), amp: 3, release: 0.5
@@ -135,7 +133,7 @@ live_loop :chords do
         sleep 1
         play_chord chord(:e4, :major), amp: 3, release: 0.5
         sleep 1.25
-
+        
         play_chord chord(:f4, :major), amp: 3, release: 0.5
         sleep 0.25
         play_chord chord(:e4, :minor), amp: 3, release: 0.5
@@ -146,12 +144,12 @@ live_loop :chords do
         sleep 0.25
         play_chord chord(:d4, :major), amp: 3, release: 0.5
         sleep 0.5
-
+        
         play_chord chord(:c4, :major), amp: 3
       end
     end
     sample :drum_splash_hard, amp: 6
-
+    
     sleep 2.5
   else
     sleep 1
@@ -189,13 +187,13 @@ end
 define :fanfare do |d,p|
   use_bpm 60
   with_sample_pack "C:\\\Projekte\\devoxx4Kids\\samples" do
-    sample :d4k__trumpetsSus,attack: 0,sustain: 0.8,release: 0.2,amp: 3,rate: d,pan: p
+    sample d4k, "trumpetsSus",attack: 0,sustain: 0.8,release: 0.2,amp: 3,rate: d,pan: p
     sleep 2
     3.times do
-      sample :d4k__trumpetsStac,attack: 0,sustain: 0.15,release: 0.05,amp: 1,rate: d,pan: p
+      sample d4k, "trumpetsStac",attack: 0,sustain: 0.15,release: 0.05,amp: 1,rate: d,pan: p
       sleep 0.15
     end
-    sample :d4k__trumpetsSus,attack: 0,sustain: 1,release: 0.5,amp: 3,rate: d,pan: p
+    sample d4k, "trumpetsSus",attack: 0,sustain: 1,release: 0.5,amp: 3,rate: d,pan: p
     sleep 1.55
   end
 end
