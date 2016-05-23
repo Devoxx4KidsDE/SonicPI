@@ -9,7 +9,7 @@ This workshop was put together by *Stefan Höhn, Irene Höppner and Matthias Mal
 The workshop was created to be finished within roughly 80-90 minutes.
 
 ## Instructions
-The workshop consists of two parts:
+The workshop consists of 2 parts:
 * Documentation
 * Sonic Pi examples (including necessary samples)
 
