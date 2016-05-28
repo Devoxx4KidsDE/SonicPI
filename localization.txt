@@ -1,0 +1,2 @@
+To keep the workshop clean during translation, we have put everything that needs to be translated in the presentation folder.
+There you find subfolders like /de and /en
