@@ -1,5 +1,5 @@
 use_bpm 120
-d4k = "/devoxx4kids/samples/jingle"
+d4k = "/devoxx4kids/workshop-sonic-pi/samples/jingle"
 
 #Lead
 in_thread do
@@ -18,7 +18,7 @@ end
 #Vocoder
 in_thread do
   sleep 12
-  sample d4k, "vocoder", amp: 2
+  sample d4k, "vocoder", amp: 4
 end
 
 #Acoustic Guitar

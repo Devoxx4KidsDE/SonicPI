@@ -1,6 +1,6 @@
 # Drums
 use_bpm 120
-d4k = "/devoxx4kids/samples/jingle"
+d4k = "/devoxx4kids/workshop-sonic-pi/samples/jingle"
 
 3.times do
   sample d4k, "drum_loop"
