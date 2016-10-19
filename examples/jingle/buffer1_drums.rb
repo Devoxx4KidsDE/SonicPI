@@ -1,8 +1,9 @@
 # Drums
 use_bpm 120
-use_sample_pack "C:/devoxx4kids/samples"
+d4k = "/devoxx4kids/samples/jingle"
+
 3.times do
-  sample :drum_loop
+  sample d4k, "drum_loop"
   sleep 4
 end
 sample :drum_break

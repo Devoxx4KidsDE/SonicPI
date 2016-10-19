@@ -1,24 +1,24 @@
 use_bpm 120
-use_sample_pack "C:/devoxx4kids/samples"
+d4k = "/devoxx4kids/samples/jingle"
 
 #Lead
 in_thread do
-  sample :lead, amp: 1.5
+  sample d4k, "lead", amp: 1.5
 end
 
 #Drums
 in_thread do
   3.times do
-    sample :drum_loop
+    sample d4k, "drum_loop"
     sleep 4
   end
-  sample :drum_break
+  sample d4k, "drum_break"
 end
 
 #Vocoder
 in_thread do
   sleep 12
-  sample :vocoder, amp: 2
+  sample d4k, "vocoder", amp: 2
 end
 
 #Acoustic Guitar
@@ -26,7 +26,7 @@ in_thread do
   2.times do
     with_fx :reverb, room: 0.7, amp: 2 do
       with_fx :echo, phase: 0.5, decay: 1, mix: 0.2 do
-        sample :acoustic
+        sample d4k, "acoustic"
       end
     end
     sleep 8
