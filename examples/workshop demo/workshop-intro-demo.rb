@@ -186,16 +186,16 @@ end
 #trumpet fanfare using separate samples for a stacatto and a sustained trumpet
 define :fanfare do |d,p|
   use_bpm 60
-  with_sample_pack "C:\\\Projekte\\devoxx4Kids\\samples" do
-    sample d4k, "trumpetsSus",attack: 0,sustain: 0.8,release: 0.2,amp: 3,rate: d,pan: p
-    sleep 2
-    3.times do
-      sample d4k, "trumpetsStac",attack: 0,sustain: 0.15,release: 0.05,amp: 1,rate: d,pan: p
-      sleep 0.15
-    end
-    sample d4k, "trumpetsSus",attack: 0,sustain: 1,release: 0.5,amp: 3,rate: d,pan: p
-    sleep 1.55
+
+  sample d4k, "trumpetsSus",attack: 0,sustain: 0.8,release: 0.2,amp: 3,rate: d,pan: p
+  sleep 2
+  3.times do
+    sample d4k, "trumpetsStac",attack: 0,sustain: 0.15,release: 0.05,amp: 1,rate: d,pan: p
+    sleep 0.15
   end
+  sample d4k, "trumpetsSus",attack: 0,sustain: 1,release: 0.5,amp: 3,rate: d,pan: p
+  sleep 1.55
+
 end
 
 #complete fanfare with four trumpets. One sample used with four rates
