@@ -25,6 +25,10 @@ Our intentions is to build up something like a "master piece" during the worksho
 
 During the creation and first test tries we noticed that the fun really starts after the first two or three buffers. Therefore our recommendation is not to spend too much time on letting the kids' creativity flow but rather move on a bit more quickly in the beginning.
 
+## Preperation
+
+If you are using an usb-sounddevice you have to setup alsa for your raspberrypi:
+https://forum-raspberrypi.de/forum/thread/23362-tutorial-mpd-und-usb-soundkarte-unter-raspbian-jessie-einrichten/
 
 ## Instructions
 
