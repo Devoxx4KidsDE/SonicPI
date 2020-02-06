@@ -102,3 +102,6 @@ Wir Empfehlen
 
 Von hier aus kann man den einen oder anderen Song hinzufügen und zusammen Spaß 
 haben...
+
+
+English version : https://github.com/Devoxx4KidsDE/workshop-sonic-pi/README.md
